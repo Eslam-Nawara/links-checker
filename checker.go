@@ -3,12 +3,12 @@ package linkschecker
 import (
 	"flag"
 	"fmt"
+	"github.com/Eslam-Nawara/linkschecker/internal/toml-file-parser"
+	"golang.org/x/net/html"
 	"io"
 	"net/http"
 	"net/url"
 	"strings"
-
-	"golang.org/x/net/html"
 )
 
 type mapChanels struct {

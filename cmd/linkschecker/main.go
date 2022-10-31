@@ -2,11 +2,12 @@ package main
 
 import (
 	"fmt"
-	linkschecker "linkschecker/links-checker"
+	"github.com/Eslam-Nawara/linkschecker"
 )
 
 func main() {
 	err := linkschecker.CheckLinksInFile()
+
 	if err != nil {
 		fmt.Println(err)
 	}
