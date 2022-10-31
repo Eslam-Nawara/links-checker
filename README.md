@@ -3,6 +3,7 @@ Links checker is a software that crawl all the websites defined in a config file
 
 **Note**
  Any link that require authentication as `LinkedIn` profiles would be recorded as broken links.
+
  Make sure to edit the config file to add your website link.
 
 ## How to use 
