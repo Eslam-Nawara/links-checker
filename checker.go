@@ -3,7 +3,6 @@ package linkschecker
 import (
 	"flag"
 	"fmt"
-	"github.com/Eslam-Nawara/linkschecker/pkg/tomlparser"
 	"golang.org/x/net/html"
 	"io"
 	"net/http"
