@@ -1,4 +1,4 @@
-package tomlparser 
+package linkschecker
 
 import (
 	"reflect"

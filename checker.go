@@ -7,7 +7,7 @@ import (
 	"net/url"
 	"strings"
 
-	parser "github.com/Eslam-Nawara/linkschecker/pkg/tomlparser"
+	"github.com/Eslam-Nawara/linkschecker/pkg/tomlparser"
 	"golang.org/x/net/html"
 )
 
@@ -18,7 +18,7 @@ type mapChanels struct {
 
 func CheckLinksInFile(configFile *string) error {
 
-	links, err := parser.LinksFromConfig(configFile)
+	links, err := linkschecker.LinksFromConfig(configFile)
 
 	if err != nil {
 		return err
