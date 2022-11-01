@@ -2,12 +2,13 @@ package linkschecker
 
 import (
 	"fmt"
-	parser "github.com/Eslam-Nawara/linkschecker/pkg/tomlparser"
-	"golang.org/x/net/html"
 	"io"
 	"net/http"
 	"net/url"
 	"strings"
+
+	parser "github.com/Eslam-Nawara/linkschecker/pkg/tomlparser"
+	"golang.org/x/net/html"
 )
 
 type mapChanels struct {
