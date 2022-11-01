@@ -1,7 +1,6 @@
 package linkschecker
 
 import (
-	"flag"
 	"fmt"
 	parser "github.com/Eslam-Nawara/linkschecker/pkg/tomlparser"
 	"golang.org/x/net/html"
@@ -16,9 +15,7 @@ type mapChanels struct {
 	linkState chan bool
 }
 
-func CheckLinksInFile() error {
-	configFile := flag.String("config", "config.toml", "")
-	flag.Parse()
+func CheckLinksInFile(configFile *string) error {
 
 	links, err := parser.LinksFromConfig(configFile)
 

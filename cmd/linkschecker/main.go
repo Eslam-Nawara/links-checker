@@ -1,12 +1,17 @@
 package main
 
 import (
+	"flag"
 	"fmt"
-    "github.com/Eslam-Nawara/linkschecker"
+
+	"github.com/Eslam-Nawara/linkschecker"
 )
 
 func main() {
-	err := linkschecker.CheckLinksInFile()
+	configFile := flag.String("config", "config.toml", "")
+	flag.Parse()
+
+	err := linkschecker.CheckLinksInFile(configFile)
 
 	if err != nil {
 		fmt.Println(err)
