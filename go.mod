@@ -1,4 +1,4 @@
-module linkschecker
+module github.com/Eslam-Nawara/linkschecker
 
 go 1.19
 
