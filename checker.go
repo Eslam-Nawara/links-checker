@@ -3,6 +3,7 @@ package linkschecker
 import (
 	"flag"
 	"fmt"
+	parser "github.com/Eslam-Nawara/linkschecker/pkg/tomlparser"
 	"golang.org/x/net/html"
 	"io"
 	"net/http"
@@ -19,7 +20,7 @@ func CheckLinksInFile() error {
 	configFile := flag.String("config", "config.toml", "")
 	flag.Parse()
 
-	links, err := LinksFromConfig(configFile)
+	links, err := parser.LinksFromConfig(configFile)
 
 	if err != nil {
 		return err
@@ -32,6 +33,10 @@ func CheckLinksInFile() error {
 	<-sync
 
 	return nil
+}
+
+func LinksFromConfig(configFile *string) {
+	panic("unimplemented")
 }
 
 func manageLinksMap() mapChanels {

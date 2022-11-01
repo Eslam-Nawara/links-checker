@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"linkschecker"
+    "github.com/Eslam-Nawara/linkschecker"
 )
 
 func main() {
