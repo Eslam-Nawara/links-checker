@@ -11,7 +11,7 @@ func main() {
 	configFile := flag.String("config", "config.toml", "")
 	flag.Parse()
 
-	err := linkschecker.CheckLinksInFile(configFile)
+	err := linkschecker.CheckLinksInFile(*configFile)
 
 	if err != nil {
 		fmt.Println(err)

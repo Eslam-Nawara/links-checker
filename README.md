@@ -24,8 +24,8 @@ A configuration file is a `TOML` file that contains a list of all sites need to 
 **Package API:**
 |Function | Description |
 | :--- | :--- |
-| `CheckLinksInFile(configFile *string) error` | Crawls a `TOML` file, extract all Links in the file and check if healthy |
-| `LinksFromConfig(configFile *string) ([]string, error)` | Parses a `TOML` file and convert it into array of strings |
+| `CheckLinksInFile(configFile string) error` | Crawls a `TOML` file, extract all Links in the file and check if healthy |
+| `LinksFromConfig(configFile string) ([]string, error)` | Parses a `TOML` file and convert it into array of strings |
 
 ## Usage and Installation:
 - Install linkschecker

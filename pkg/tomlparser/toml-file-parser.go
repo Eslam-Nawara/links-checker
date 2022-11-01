@@ -1,4 +1,4 @@
-package tomlparser 
+package tomlparser
 
 import (
 	"reflect"
@@ -6,8 +6,8 @@ import (
 	toml "github.com/pelletier/go-toml"
 )
 
-func LinksFromConfig(configFile *string) ([]string, error) {
-	config, err := toml.LoadFile(*configFile)
+func LinksFromConfig(configFile string) ([]string, error) {
+	config, err := toml.LoadFile(configFile)
 
 	if err != nil {
 		return nil, err

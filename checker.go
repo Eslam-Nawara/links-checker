@@ -16,7 +16,7 @@ type mapChanels struct {
 	linkState chan bool
 }
 
-func CheckLinksInFile(configFile *string) error {
+func CheckLinksInFile(configFile string) error {
 
 	links, err := parser.LinksFromConfig(configFile)
 
