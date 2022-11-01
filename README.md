@@ -16,7 +16,7 @@ A configuration file is a `TOML` file that contains a list of all sites need to 
 ```
 
 ## How to use 
-- Get the package
+**Get the package**
 ```sh 
  go get github.com/Eslam-Nawara/linkschecker
 ```
