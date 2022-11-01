@@ -18,7 +18,7 @@ A configuration file is a `TOML` file that contains a list of all sites need to 
 ## How to use 
 - Get the package
 ```sh 
-$ go git github.com/Eslam-Nawara/linkschecker
+ go get github.com/Eslam-Nawara/linkschecker
 ```
 
 **Package API:**
@@ -30,10 +30,10 @@ $ go git github.com/Eslam-Nawara/linkschecker
 ## Usage and Installation:
 - Install linkschecker
 ```sh 
-$ go install github.com/Eslam-Nawara/linkschecker/cmd/linkschecker@latest
+ go install github.com/Eslam-Nawara/linkschecker/cmd/linkschecker@latest
 ```
 - Create a `TOML` file with links to be checked.
 - Run the checker	
 ```sh
-$ linkschecker --config=<config file>
+ linkschecker --config=<config file>
 ```
