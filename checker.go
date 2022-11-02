@@ -16,6 +16,7 @@ type mapChanels struct {
 	linkState chan bool
 }
 
+// Parse the toml file, extract an array of links and start checking the links concurrently
 func CheckLinksInFile(configFile string) error {
 
 	links, err := parser.LinksFromConfig(configFile)
@@ -33,10 +34,8 @@ func CheckLinksInFile(configFile string) error {
 	return nil
 }
 
-func LinksFromConfig(configFile *string) {
-	panic("unimplemented")
-}
-
+// Starts a go routin that manages reading from and writing to the list
+// of checked links that is shared among all go routins.
 func manageLinksMap() mapChanels {
 	ch := mapChanels{}
 
@@ -57,6 +56,7 @@ func manageLinksMap() mapChanels {
 	return ch
 }
 
+// Checks the health of an array of links
 func (mp mapChanels) checkArrayOfLinks(links []string, parent string, parentChan chan bool) {
 
 	cnt := 0
@@ -93,6 +93,7 @@ func (mp mapChanels) checkArrayOfLinks(links []string, parent string, parentChan
 	parentChan <- true
 }
 
+// Validate the link by sending a Head request or a Get request.
 func validateLink(link string) bool {
 
 	link = ensureScheme(link)
@@ -111,6 +112,7 @@ func validateLink(link string) bool {
 	return requestFun(http.Head) || requestFun(http.Get)
 }
 
+// Extract links all links in a web page.
 func visitLinkAndExtractLinks(link string) []string {
 
 	link = ensureScheme(link)
@@ -134,6 +136,7 @@ func ensureScheme(link string) string {
 	return link
 }
 
+// Extract the links from the page body
 func extractLinksFromIOReader(body io.ReadCloser) []string {
 
 	var links []string
@@ -157,6 +160,7 @@ func extractLinksFromIOReader(body io.ReadCloser) []string {
 	}
 }
 
+// Extract Hostname from a url
 func getHostname(link string) string {
 
 	link = ensureScheme(link)

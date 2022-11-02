@@ -6,6 +6,8 @@ import (
 	toml "github.com/pelletier/go-toml"
 )
 
+
+// Parse a config file into an array of all links in a file
 func LinksFromConfig(configFile string) ([]string, error) {
 	config, err := toml.LoadFile(configFile)
 
